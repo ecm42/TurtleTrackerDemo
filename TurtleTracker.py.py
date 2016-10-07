@@ -7,7 +7,7 @@
 # Created on: Oct 2016
 
 # Create a variable pointing to the file with no header
-fileName = "SaraNoHeader.txt"
+fileName = "V:\\Scripting3\\SaraNoHeader.txt"
 
 # Open the file as a read-only file object
 fileObj = open(fileName, 'r')
@@ -15,7 +15,8 @@ fileObj = open(fileName, 'r')
 # Read the first line from the open file object
 lineString = fileObj.readline()
 
-while lineString:#run til lineString is false (empty string)
+# Use a while loop to read each line, one at a time, until the end of the file is reached
+while lineString:
 
     # Use the split command to parse the items in lineString into a list object
     lineData = lineString.split("\t")
@@ -31,10 +32,10 @@ while lineString:#run til lineString is false (empty string)
 
     # Print information to the user
     print "According to record " + recordID, 
-    print "Sara was seen at " + obsLat + " d LAT; " + obsLon + " d LON on " + obsDate
+    print "Sara was seen at " + obsLat + " d LAT; " + obsLat + " d LON on " + obsDate
 
+    # Read in the next line
     lineString = fileObj.readline()
-
-
+    
 # Close the file object
 fileObj.close()
